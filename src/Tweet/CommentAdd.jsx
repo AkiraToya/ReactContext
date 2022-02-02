@@ -20,7 +20,9 @@ let CommentAdd = ({tweetId, addCommentFn}) => {
                 placeholder="Reply Comment" 
                 ref={comment} />
             <button type="submit" 
-                onClick={() => { addComment() }}>Reply</button>
+                onClick={() => { addComment() }}>
+                    Reply
+            </button>
         </div>
         </form>
     )

@@ -20,7 +20,8 @@ function App() {
 
   return (
     <div className="App">
-      <TweetList tweets={tweets} addCommentFn={addCommentFn} />
+      <TweetList tweets={tweets} 
+        addCommentFn={addCommentFn} />
     </div>
   );
 }

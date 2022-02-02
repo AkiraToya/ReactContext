@@ -8,7 +8,8 @@ let CommentList = ({ tweetId, comments, addCommentFn }) => (
             <Comment comment={comment} key={comment.id} />
         )}
 
-        <CommentAdd tweetId={tweetId} addCommentFn={addCommentFn} />
+        <CommentAdd tweetId={tweetId} 
+            addCommentFn={addCommentFn} />
     </div>
 )
 
