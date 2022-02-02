@@ -1,7 +1,9 @@
 import { useContext, useRef } from "react"
 import TweetContext from "./Context/TweetContext"
+import { TweetsContext } from "./Context/TweetsContext"
 
-let CommentAdd = ({addCommentFn}) => {
+let CommentAdd = () => {
+    let { addCommentFn } = useContext(TweetsContext)
     let { tweet } = useContext(TweetContext)
     let comment = useRef()
 

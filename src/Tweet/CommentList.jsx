@@ -3,7 +3,7 @@ import Comment from "./Comment"
 import CommentAdd from "./CommentAdd"
 import TweetContext from "./Context/TweetContext"
 
-let CommentList = ({ addCommentFn }) => {
+let CommentList = () => {
     let { tweet } = useContext(TweetContext)
     let comments = tweet.comments
 
@@ -14,7 +14,7 @@ let CommentList = ({ addCommentFn }) => {
                 <Comment comment={comment} key={comment.id} />
             )}
 
-            <CommentAdd addCommentFn={addCommentFn} />
+            <CommentAdd />
         </div>
     )
 }
