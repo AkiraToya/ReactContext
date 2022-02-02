@@ -1,12 +1,18 @@
+import TweetContext from './Context/TweetContext'
 import Tweet from './Tweet'
 
 let TweetList = ({ tweets, addCommentFn }) => (
     <div id="tweet-list">
         <h1>My Tweet List</h1>
         {tweets.map(tweet => 
-            <Tweet tweet={tweet} 
-                key={tweet.id} 
-                addCommentFn={addCommentFn} />
+            <TweetContext.Provider 
+                key={tweet.id}
+                value={{
+                    tweet: tweet
+                }}
+            >
+                <Tweet addCommentFn={addCommentFn} />
+            </TweetContext.Provider>
         )}
     </div>
 )
