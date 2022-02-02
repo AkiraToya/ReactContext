@@ -1,5 +1,5 @@
 import './App.css';
-import {tweetsData} from './tweets';
+import {tweetsData} from './Data/tweets';
 import TweetList from './Tweet/TweetList';
 import { useState } from 'react';
 
