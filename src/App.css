@@ -1,38 +1,70 @@
+body{
+  background-color: lightcyan;
+}
+
+h1{
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #777;
+}
+
+h3{
+  margin: 0;
+  color: #BBB;
+}
+
+hr{
+  margin-top: 10px;
+  opacity: 0.3;
+}
+
 .App {
-  text-align: center;
+  text-align: left;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tweet{
+  padding: 20px;
+  border: 1px solid lightblue;
+  margin-bottom: 20px;
+  color: #444;
+  font-size: larger;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.comment-list{
+  margin-top: 5px;
+  padding: 20px;
+  color: #666;
+  border: 1px solid #DEE;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.comment{
+  margin-bottom: 10px;
+}
+
+.comment-add{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 40px;
+  width: 100%;
+}
+
+.comment-add input{
+  border: 1px solid lightskyblue;
+  padding: 0 20px;
+  flex: 1;
+  color: #666;
+}
+
+.comment-add button{
+  width: 100px;
+  border: none;
+  background-color: lightskyblue;
   color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.comment-add button:active{
+  background-color: white;
+  color: lightskyblue;
 }

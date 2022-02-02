@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import {tweetsData} from './tweets';
+import TweetList from './Tweet/TweetList';
+import { useState } from 'react';
 
 function App() {
+
+  let [tweets, setTweets] = useState(tweetsData)
+
+  let addCommentFn = (tweetId, comment) => {
+    let newTweets = tweets.map(tweet => {
+      if (tweet.id === tweetId) {
+        tweet.comments = [...tweet.comments, comment]
+      }
+      return tweet
+    })
+
+    setTweets(newTweets)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TweetList tweets={tweets} addCommentFn={addCommentFn} />
     </div>
   );
 }
